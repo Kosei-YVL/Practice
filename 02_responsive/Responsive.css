@@ -1,0 +1,37 @@
+@media(max-width: 767px) {
+  header{
+    width: 100%
+  }
+
+  .profile-image img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-introduction h2{
+    font-size: 1.5em;
+  }
+
+  .profile-skills li {
+    margin-right: 10px;
+  }
+}
+@media(min-width: 768px) and (max-width: 1024px) {
+  header ul li {
+    margin-right: 15px;
+    margin-top: 15px;
+  }
+
+  .profile-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .profile-introduction h2, h2 {
+    font-size: 1.8em;
+  }
+
+  .profile-skills li {
+    margin-right: 15px;
+  }
+}

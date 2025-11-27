@@ -1,0 +1,36 @@
+header{
+    display: flex;
+    background-color:mediumaquamarine}
+header ul{
+    display: flex;
+}
+header ul li{
+    list-style: none;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.profile-introduction h2{
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    padding-bottom: 3px;
+}
+.profile-image{
+    display: flex;
+
+}
+.profile-image img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+h2{
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    padding-bottom: 3px;
+}
+.profile-skills li{
+    list-style: none;
+    margin-right: 20px;
+}
+

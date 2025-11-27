@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ヒーローヘッダー</title>
+        <style>
+            body{
+                margin: 0;
+                font-family: sans-serif;
+            }
+            /*ナビゲーション*/
+            .navbar{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px;
+                background-color: white;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                z-index: 10;
+                color: black;
+                box-sizing: border-box;
+            }
+            .logo{
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .menu{
+                display: flex;
+                gap: 10px;
+            }
+            .menu a{
+                color: black;
+                text-decoration: none;
+                font-size: 18px;
+            }
+            .hamburger{
+                display: none;
+            }
+            .hero{
+                height: 100vh;
+                background-image: url('https://picsum.photos/id/1018/1920/1080') ;
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: black;
+                position: relative;
+                text-align: center;
+                flex-direction: column;
+                padding-top: 80px;
+            }
+            .hero h1{
+                font-size: 60px;
+                margin: 0;
+                background-color: rgba(255, 255, 255, 0.7);
+            }
+            .hero p{
+                font-size: 20px;
+                margin-top: 15px;
+                background-color: rgba(255, 255, 255, 0.7);
+            }
+            @media (max-width: 768px){
+                .hamburger{
+                    display: flex;
+                    flex-direction: column;
+                    cursor: pointer;
+                    justify-content: space-between;
+                    width: 30px;
+                    height: 20px;
+                }
+                .hamburger span{
+                    height: 4px;
+                    background: black;
+                    border-radius: 2px;
+                    transition: 0.3s;
+                    padding: 0;
+                }
+                .hamburger.active span:nth-child(1){
+                    transform:translateY(7px)  rotate(40deg);
+                    
+                }
+                .hamburger.active span:nth-child(2){
+                    opacity: 0;
+                }
+                .hamburger.active span:nth-child(3){
+                    transform:translateY(-9px) rotate(-40deg);
+                   
+                }
+                .navbar{
+                    position: relative;
+                    display: block;
+                    
+                }
+                .nav-top{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .menu{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    background: white;
+                    padding: 0px 20px;
+                    box-sizing: border-box;
+                    top: 100%;
+                    left: 0;
+                    transition: max-height 0.3s ease, opacity 0.3s ease ;
+                    max-height: 0;
+                    overflow: hidden;
+                    opacity: 0;
+                }
+                .menu.active{
+                    max-height: 300px;
+                    opacity: 1;
+                    padding :15px 20px;
+                    gap: 10px;
+                }
+                .hero{
+                    padding-top: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="nav-top">
+                <div class="logo">Mysite</div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <nav class="menu" id="menu">
+                <a href="#">ホーム</a>
+                <a href="#">サービス</a>
+                <a href="#">問い合わせ</a>
+            </nav>
+        </header>
+        <section class="hero">
+            <h1>Hero Section</h1>
+            <p>大きな画像とキャッチコピーを置く人気UI</p>
+        </section>
+        <script>
+            const hamburger= document.getElementById("hamburger");
+            const menu= document.getElementById("menu");
+            hamburger.addEventListener("click",()=>{
+                hamburger.classList.toggle("active");
+                menu.classList.toggle("active");
+            });
+
+        </script>
+
+    </body>
+</html>
+           
