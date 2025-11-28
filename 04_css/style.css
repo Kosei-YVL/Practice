@@ -18,23 +18,11 @@ body{
     justify-content: center;
     background: black;
 }
-.img-1{
-    width: 300px;
+.img-1,.img-2{
+    flex:  1;
     overflow: hidden;
-    aspect-ratio: 16/9;
 }
-.img-1 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.img-2{
-    width: 300px;
-    overflow: hidden;
-    margin-left: 20px;
-    aspect-ratio: 16/9;
-}
-.img-2 img{
+.img-1 img,.img-2 img{
     width: 100%;
     height: 100%;
     object-fit: cover;
