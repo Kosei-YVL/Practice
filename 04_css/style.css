@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+.header{
+    background:dimgray;
+    color:white;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+.container{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background: black;
+}
+.img-1{
+    width: 300px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+}
+.img-1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-2{
+    width: 300px;
+    overflow: hidden;
+    margin-left: 20px;
+    aspect-ratio: 16/9;
+}
+.img-2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
